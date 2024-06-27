@@ -119,3 +119,49 @@ They are at:
 
 
 
+## Running RetroPie setup
+
+```
+sudo ~/RetroPie-Setup/retropie-setup.sh
+```
+
+## Fixing start/select ignored when within game
+
+Make sure emulationstation is NOT running.
+
+Ran RetroPie setup script, as above; chose `C: Configuration / tools`
+
+Select `emulationstation`
+
+Choose `1: Clear/Reset Emulation Station input configuration`
+
+
+
+Trying to get Robotron working with second joystick
+
+https://retropie.org.uk/forum/topic/29760/2-joystick-games-config/18
+
+
+
+## Mame keyboard cheats
+
+Space : full speed
+L     : go full speed for a bit
+
+
+## Creating backup of RPi SD Card
+
+Use ApplePiBaker software.  Enter password when prompted.
+
+# Reinstalling everything onto an SD Card
+
+1. On Mac, run Raspberry Pi Imager.  Insert SD card into the SD Card adapter (plugged into Macbook)
+
+1. Raspberry Pi Device:   RASPBERRY PI 5
+1. Operating System: choose Raspberry Pi OS (other) -> Raspberry Pi OS Lite (64-bit)
+1. Storage:  CHOOSE STORAGE -> APPLE SD CARD READER MEDIA
+1. NEXT
+1. Would you like to apply OS customization settings? YES
+1. All existing data on 'APPLE SD Card Reader Media' will be erased.   ... continue?  YES
+1. Raspberry PI Imager wants to make changes. ... -> ENTER PASSWORD
+1. Raspberry Pi OS Lite ... has been written to APPLE SD Card Reader Media ... you can now remove... REMOVE THE CARD, select CONTINUE
