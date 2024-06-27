@@ -165,3 +165,16 @@ Use ApplePiBaker software.  Enter password when prompted.
 1. All existing data on 'APPLE SD Card Reader Media' will be erased.   ... continue?  YES
 1. Raspberry PI Imager wants to make changes. ... -> ENTER PASSWORD
 1. Raspberry Pi OS Lite ... has been written to APPLE SD Card Reader Media ... you can now remove... REMOVE THE CARD, select CONTINUE
+1. From `cabinet` directory, type `push_home_dir.sh`
+1. If it fails due to "unknown host" error, `vi ~/.ssh/known_hosts` and delete the existing entries for `10.0.0.184` (or whatever it is near the bottom causing the conflict)
+
+
+# Booting Raspberry PI
+
+1. If it asks for a password, login as `pi` with password `password`
+1. Once logged in, ran `sudo raspi-config`; choose `System Options`; `Boot / Auto Login`; `B2 Console Autologin`; Reboot now; subsequent boots should be into a prompt
+
+
+
+
+
