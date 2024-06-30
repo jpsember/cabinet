@@ -149,7 +149,7 @@ Space : full speed
 L     : go full speed for a bit
 
 
-## Creating backup of RPi SD Card
+# Creating backup of RPi SD Card
 
 Use ApplePiBaker software.  Enter password when prompted.
 
@@ -165,6 +165,9 @@ Use ApplePiBaker software.  Enter password when prompted.
 1. All existing data on 'APPLE SD Card Reader Media' will be erased.   ... continue?  YES
 1. Raspberry PI Imager wants to make changes. ... -> ENTER PASSWORD
 1. Raspberry Pi OS Lite ... has been written to APPLE SD Card Reader Media ... you can now remove... REMOVE THE CARD, select CONTINUE
+
+# Customize shell
+
 1. From `cabinet` directory, type `push_home_dir.sh`
 1. If it fails due to "unknown host" error, `vi ~/.ssh/known_hosts` and delete the existing entries for `10.0.0.184` (or whatever it is near the bottom causing the conflict)
 
@@ -175,6 +178,47 @@ Use ApplePiBaker software.  Enter password when prompted.
 1. Once logged in, ran `sudo raspi-config`; choose `System Options`; `Boot / Auto Login`; `B2 Console Autologin`; Reboot now; subsequent boots should be into a prompt
 
 
+# Installing Retropie
+
+1. On Mac, type `sshe` to open a shell on the RPi
+1. Type `sudo apt install -y git lsb-release`
+1. Type
+```
+cd
+git clone --depth=1 https://github.com/RetroPie/RetroPie-Setup.git
+```
+1. Type
+```
+cd RetroPie-Setup
+chmod +x retropie_setup.sh
+sudo ./retropie_setup.sh
+```
+1. Set audio, startup behavior (document this)
+
+1. Do `Basic Install` and answer Yes
+
+...This will take a while!  Started at 2:56; it was finished by 3:30.
+
+
+1. Exit and type `emulationstation`
+
+
+# Addressing problem with audio
+
+Failed to run Stargate:
+```
+VolumeControl::init() - Failed to find mixer elements!
+```
+
+From this link: `https://retropie.org.uk/docs/Sound-Issues/`
+
+No effect
+
+Now reformatting SD Card with OS: RASPBERRY PI OS LITE (32-BIT)
+
+...still the same volume problem
+
+Go back to 64 bit mode at some point.
 
 
 
